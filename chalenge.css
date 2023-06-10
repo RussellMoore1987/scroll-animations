@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+}
+
+.koala-img1 {
+    width: 430px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.sub-section {
+    width: 50%;
+    padding: 10px 30px
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    max-width: 1300px;
+    min-width: 300px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always; 
+}
+
+.banner {
+    height: 300px;
+    background-size: cover;
+    background-position: 0 -100px;
+    background-repeat: no-repeat;
+    background-image: url('http://127.0.0.1:5500/termite-mounds-g9de7c3f17_1280.jpg');
+    scroll-snap-align: start;
+}
+
+/* ================================================================== */
+/* Animations */
+/* ================================================================== */
+
+[data-anime] {
+    transition: all 1s ease-in-out;
+} 
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+}
+
+.fade-in {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.hidden-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-200px);
+}
+
+.hidden-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(200px);
+}
+
+.fade-in-slide {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
