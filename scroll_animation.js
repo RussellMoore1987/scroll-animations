@@ -6,8 +6,7 @@ const animationKey = {
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        console.log('hit');
-        const classAnimation = entry.target.dataset.anime ?? "fadeIn";
+        const classAnimation = entry.target.dataset.anime;
         entry.target.classList.add(animationKey[classAnimation][0]);
         if (entry.isIntersecting) { // to add animation
             entry.target.classList.add(animationKey[classAnimation][1]);
